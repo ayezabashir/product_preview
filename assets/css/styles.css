@@ -1,0 +1,11 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: hsl(30, 38%, 92%);
+  font-family: '"Fraunces", serif;';
+  font-weight: 400;
+}/*# sourceMappingURL=styles.css.map */
