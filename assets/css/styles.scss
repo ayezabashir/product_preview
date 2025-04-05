@@ -1,24 +1,7 @@
 @import './resets';
 @import './variables';
-
-
-@function weight($weight-name){
-    @return map-get($font-weights, $weight-name );
-}; 
-
-
-@mixin flexCenter($direction){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;     
-    }
-}
+@import './mixins';
+@import './product';
 
 body{
     @include flexCenter(row);
@@ -31,33 +14,3 @@ body{
         padding: 20px;
     }
 }
-
-.product{
-    @include flexCenter(row);
-    width: 700px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: $white;
-    &__img, &__details{
-        width: 100%;
-    }
-    &__img{
-        display: flex;
-
-    }
-    &__details{
-        margin: 2rem;
-    }
-    &__category{
-        color: $grey;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 14px;
-        font-family: $fam-montserrat;
-        font-weight: weight(regular);
-    }
-    @include mobile{
-        @include flexCenter(column)
-    };
-}
-
