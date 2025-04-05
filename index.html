@@ -14,8 +14,11 @@
     <main>
         <article class="product">
             <figure class="product__img">
-                <img src="assets/images/image-product-desktop.jpg" alt="Gabrielle Essence Eau De Parfum">
-            </figure>
+                <picture>
+                  <source media="(max-width: 600px)" srcset="assets/images/image-product-mobile.jpg">
+                  <img src="assets/images/image-product-desktop.jpg" alt="Gabrielle Essence Eau De Parfum bottle">
+                </picture>
+              </figure>              
             <section class="product__details">
                 <header>
                     <p class="product__category">

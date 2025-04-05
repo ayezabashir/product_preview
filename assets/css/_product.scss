@@ -71,7 +71,17 @@
         }
     }
     @include mobile{
-        @include flexCenter(column)
+        @include flexCenter(column);
+        width: auto;
+        &__title{
+            font-size: 34px;
+        }
+        &__description{
+            font-size: 15px;
+        }
+        &-cart{
+            width: 20px;
+        }
     };
 }
 
